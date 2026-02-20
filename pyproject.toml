@@ -1,5 +1,5 @@
 [project]
-name = "assortments"
+name = "loom"
 version = "0.1.0"
 description = "A collection of frequently used AI & Robotics modules"
 readme = "README.md"
@@ -7,6 +7,7 @@ requires-python = ">=3.14"
 authors = [{ name = "Kanishk Navale", email = "navalekanishk@gmail.com" }]
 
 dependencies = [
+    "colorlog>=6.10.1",
     "duckdb>=1.4.4",
     "numpy>=2.4.2",
     "pydantic>=2.12.5",
