@@ -20,7 +20,6 @@ dev = [
     "black>=26.1.0",
     "coverage>=7.13.4",
     "cython>=3.2.4",
-    "isort>=7.0.0",
     "pre-commit>=4.0.0",
     "pytest>=9.0.2",
     "pytest-cov>=7.0.0",
@@ -44,15 +43,12 @@ package = true
 
 [tool.ruff]
 line-length = 80
-target-version = "py314"
-lint.extend-select = ["I", "PLE", "PLW"]
+target-version = "py312"
 fix = true
+exclude = ["archive"]
 
-[tool.isort]
-profile = "black"
-force_grid_wrap = 0
-use_parentheses = true
-line_length = 80
+[tool.ruff.lint]
+extend-select = ["I", "PLE", "PLW"]
 
 [tool.black]
 line-length = 80
