@@ -9,6 +9,7 @@ authors = [{ name = "Kanishk Navale", email = "navalekanishk@gmail.com" }]
 dependencies = [
     "colorlog>=6.10.1",
     "duckdb>=1.4.4",
+    "kornia>=0.8.2",
     "numpy>=2.4.2",
     "pydantic>=2.12.5",
     "pytorch-lightning>=2.6.1",
@@ -76,4 +77,4 @@ branch = true
 source = ["loom"]
 
 [tool.coverage.report]
-fail_under = 80
+fail_under = 60

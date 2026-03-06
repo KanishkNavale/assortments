@@ -16,6 +16,10 @@ checks: install
 tests: install
 	uv run pytest --cov=loom --cov-report=term-missing
 
+PHONY: lint
+lint:
+	skip=pytest uv run pre-commit run
+
 .PHONY: clean
 clean:
 	@rm -rf .venv
