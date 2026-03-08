@@ -22,3 +22,11 @@ class Pose(BaseDataClass):
         q = Quaternion(self.quaternion.unsqueeze(dim=0))
         t = self.translation.unsqueeze(dim=0)
         return Se3(q, t)
+
+
+if __name__ == "__main__":
+    pose = Pose(
+        translation=torch.tensor([1.0, 2.0, 3.0]),
+        quaternion=torch.tensor([0.7071, 0.0, 0.7071, 0.0]),
+    )
+    print(pose)
