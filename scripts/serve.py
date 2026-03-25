@@ -1,4 +1,4 @@
-from loom.__version__ import version  # type: ignore
+from loom.__version__ import version
 
 BANNER = """
  ██▓     ▒█████   ▒█████   ███▄ ▄███▓

@@ -1,26 +1,20 @@
-.PHONY: install
 install:
 	uv sync
 	uv run pre-commit install -f
 
-.PHONY: update
 update: install
 	uv sync --upgrade
 	uv run pre-commit autoupdate
 
-.PHONY: checks
 checks: install
 	uv run pre-commit run --all-files
 
-.PHONY: tests
 tests: install
 	uv run pytest --cov=loom --cov-report=term-missing
 
-PHONY: lint
 lint:
 	skip=pytest uv run pre-commit run
 
-.PHONY: clean
 clean:
 	@rm -rf .venv
 	@rm -rf build dist *.egg-info
@@ -32,12 +26,10 @@ clean:
 	@find loom -type f -name "*.c" -delete
 	@rm -rf .pytest_cache .coverage
 
-.PHONY: compile
 compile:
 	@rm -rf build dist *.egg-info
 	@uv run --no-dev python scripts/cythonizer.py
 
-.PHONY: container
 container:
 	docker buildx build -t loom:latest .
 	docker image prune -f

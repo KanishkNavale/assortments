@@ -260,7 +260,7 @@ def test_clear_instances_with_incomplete_instance(temp_log_dir):
     class FakeInstance:
         pass
 
-    LoomLogger._instances["fake_logger"] = FakeInstance()  # type: ignore[assignment]
+    LoomLogger._instances["fake_logger"] = FakeInstance()  # noqa # type: ignore
 
     assert len(LoomLogger._instances) == 2
 
