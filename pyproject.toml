@@ -15,6 +15,7 @@ dependencies = [
     "pydantic>=2.12.5",
     "pytorch-lightning>=2.6.1",
     "torch>=2.10.0",
+    "unsloth>=2026.3.17",
 ]
 
 [dependency-groups]
